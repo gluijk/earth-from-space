@@ -1,6 +1,6 @@
 # Earth seen from space: Moon and ISS
 # www.overfitting.net
-# https://www.overfitting.net/2023/01/proyeccion-lineal-de-escenas-3d-sobre.html
+# https://www.overfitting.net/2023/04/fotografiando-la-tierra-desde-el-espacio.html
 
 
 library(ggmap)  # map_data()
@@ -14,7 +14,7 @@ NewBitmap = function(dimx, dimy, val=0) {
     return(array(val,c(dimx,dimy)))
 }
 
-DrawCircle = function(img, x0, y0, r, inc=T, val=1, fill=F, thick=1) {
+DrawCircle = function(img, x0, y0, r, inc=TRUE, val=1, fill=FALSE, thick=1) {
     # Dibuja círculo de centro (x0,y0) y radio r
     # Por defecto método no destructivo, con valor=1 y sin relleno
     # Puede elegirse el grosor si no se rellena
@@ -23,7 +23,7 @@ DrawCircle = function(img, x0, y0, r, inc=T, val=1, fill=F, thick=1) {
     return(img)
 }
 
-DrawEllip = function(img, x0, y0, a, b, inc=T, val=1, fill=F, thick=1) {
+DrawEllip = function(img, x0, y0, a, b, inc=TRUE, val=1, fill=FALSE, thick=1) {
     # Dibuja elipse de centro (x0,y0) y radios a y b
     # Por defecto método no destructivo, con valor=1 y sin relleno
     # Puede elegirse el grosor si no se rellena
