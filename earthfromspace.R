@@ -84,8 +84,8 @@ DT$y=polar2y(Rearth, DT$phi, DT$theta)
 NIMG=100  # number of images
 IMAGESIZE=800  # 512  # animation dimensions in pixels
 TH=0.9  # allow border
-t=1
 
+t=1
 for (d in dobserver.iss+seq(0, 1 , length.out=NIMG)^5*(dobserver.moon-dobserver.iss)) {
     DT$z=polar2z(Rearth, DT$phi, DT$theta) + Rearth+d  # Earth along Z axis
     # Distance from each map point to observation point (0,0,0)
@@ -108,8 +108,8 @@ for (d in dobserver.iss+seq(0, 1 , length.out=NIMG)^5*(dobserver.moon-dobserver.
     # ISS FOV:  140º diagonal -> 7.87mm FF
     # Moon FOV: 1.9º diagonal -> 1300mm FF
     
-    print(paste0("Calculating ", t, "/", NIMG, " with distance d=", d,
-                 "km and FOV=", FOV, "º"))
+    print(paste0(t, "/", NIMG, ": distance d=", round(d), "km, FOV=",
+                 round(FOV,1), "º, ", nrow(DTplot), " points"))
     
     img=DrawCircle(img, NCOLDIV2, NROWDIV2, min(NCOLDIV2,NROWDIV2)*TH,
                    fill=TRUE, val=0.25)
