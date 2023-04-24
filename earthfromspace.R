@@ -116,7 +116,7 @@ for (d in dobserver.iss+seq(0, 1 , length.out=NIMG)^5*(dobserver.moon-dobserver.
     DTplot$factor=f/DTplot$z
     DTplot$xp=DTplot$x*DTplot$factor + NCOLDIV2
     DTplot$yp=DTplot$y*DTplot$factor + NROWDIV2
-    img[round(cbind(DTplot$xp, DTplot$yp))]=1  # draw points7
+    img[round(cbind(DTplot$xp, DTplot$yp))]=1  # draw points
     
     SaveBitmap(img, paste0("img", ifelse(t<10, "00", ifelse(t<100, "0", "")), t))
     t=t+1
