@@ -110,9 +110,9 @@ for (d in DISTANCES) {
         (d+Rearth-Rearth*cos(thetamax))/(Rearth*sin(thetamax))*TH
     FOV=(pi-2*thetamax)*180/pi  # FOV in deg
     # https://www.scantips.com/lights/fieldofview.html
-    # ISS FOV:          140º diagonal -> 7.87mm FF
-    # Polaris Dawn FOV: 110º diagonal -> 15mm FF
-    # Moon FOV:         1.9º diagonal -> 1300mm FF
+    # ISS FOV:          140.0º diagonal -> 7.87mm FF
+    # Polaris Dawn FOV: 110.1º diagonal -> 15.14mm FF
+    # Moon FOV:           1.9º diagonal -> 1300mm FF
     
     print(paste0(t, "/", NIMG, ": distance d=", round(d), "km, FOV=",
                  round(FOV,1), "º, ", nrow(DTplot), " points"))
